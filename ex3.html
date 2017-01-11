@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TP JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="./asset/ex3.css">
+  </head>
+  <body>
+    <p id="calcul">
+      Calcul de votre âge
+    </p>
+    <label for="date">Date de naissance (jj/mm/aaaa) :</label><br>
+    <input type="date" name="date" id="DateNaiss"><br>
+    <p id="age"></p>
+    <button onclick="calculAge()">
+      Votre âge
+    </button>
+    <script language="javascript">
+      function calculAge() {
+        var today_date= new Date();
+        var date_birth = document.getElementById("DateNaiss").value;
+        var date = date_birth.split("/");
+        document.getElementById("age").innerHTML = date;
+       
+        
+      }
+    </script>
+  </body>
