@@ -9,7 +9,7 @@
     <p id="calcul">
       Calcul de votre âge
     </p>
-    <label for="date">Date de naissance (jj/mm/aaaa) :</label><br>
+    <label for="date">Date de naissance (mm/jj/aaaa) :</label><br>
     <input type="date" name="date" id="DateNaiss"><br>
     <p id="age"></p>
     <button onclick="calculAge()">
@@ -17,10 +17,12 @@
     </button>
     <script language="javascript">
       function calculAge() {
-        var today_date= new Date();
+        var today_date = new Date();
         var date_birth = document.getElementById("DateNaiss").value;
         var date = date_birth.split("/");
-        document.getElementById("age").innerHTML = date;
+        var day_birth = date[0];
+        var month_birth = date[1];
+        var year_birth = date[2];
        
         
       }
