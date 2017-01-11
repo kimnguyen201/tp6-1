@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TP JavaScript</title>
+  </head>
+  <body>
+    <img src="./asset/off.png" alt="off" onclick="changeImage(this)" id="off">
+    <p id="text">
+    </p>
+    <script language="javascript">
+      var newsrc = "on.png";
+
+      function changeImage() {
+        if ( newsrc == "on.png" ) {
+          document.getElementById("off").src = "/asset/on.png";
+          document.getElementById("off").alt = "on";
+          document.getElementById("text").innerHTML = "On";
+          newsrc  = "off.png";
+        } 
+        else {
+          document.getElementById("off").src = "/asset/off.png";
+          document.getElementById("off").alt = "off";
+          document.getElementById("text").innerHTML = "Off";
+          newsrc  = "on.png";
+        }
+      }
+    </script>
+  </body>
+</html>

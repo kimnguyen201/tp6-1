@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<title>TP JS</title>
+		<link rel='stylesheet' type='text/css' href='./asset/ex1.css'>
+    <script language="javascript">
+      function appel() {
+        var element = document.getElementById("boite_clic");
+        element.style.backgroundColor=prompt('Entrez une couleur');
+      }
+    </script>
+	</head>
+  <body>
+    <h5> Cliquez dans la zone pour changer la couleur </h5>
+    <div id="boite_clic" onclick=appel();>
+    </div>
+	</body>
+</html>
